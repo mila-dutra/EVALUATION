@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Performance Evaluation</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Corrigido o nome do CSS para styles.css -->
 </head>
 <body>
-    <!-- Conteúdo do seu site aqui... -->
+    <div class="container">
+        <!-- Conteúdo do seu site aqui... -->
+        <div class="gestor-id-section">
+            <label for="gestorID">ID do Gestor:</label>
+            <input type="text" id="gestorID">
+            <button onclick="verifyGestorID()">Verificar ID</button>
+        </div>
+
+        <div id="searchBox" class="search-box" style="display: none;">
+            <label for="searchFuncionario">Buscar Funcionário:</label>
+            <input type="text" id="searchFuncionario" onkeyup="filtrarFuncionarios()">
+            <div id="listaFuncionarios" class="lista-funcionarios"></div>
+        </div>
+
+        <div id="avaliacao" class="avaliacao" style="display: none;">
+            <h1>Avaliação</h1>
+            <div class="evaluation-inputs">
+                <label for="avaliacao1">Avaliação 1:</label>
+                <input type="number" id="avaliacao1">
+                <label for="avaliacao2">Avaliação 2:</label>
+                <input type="number" id="avaliacao2">
+            </div>
+            <button onclick="calcularPagamento()">Calcular Pagamento</button>
+            <div id="resultado"></div>
+            <button onclick="enviarDados()">Enviar Dados</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
